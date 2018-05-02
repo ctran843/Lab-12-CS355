@@ -38,5 +38,3 @@ exports.update = function(params, callback) {
         callback(err, result);
     });
 };
-
-//comment
