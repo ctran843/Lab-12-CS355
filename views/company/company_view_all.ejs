@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<HTML>
+<head>
+    <title>Company - View All</title>
+</head>
+    <body>
+        <h1>Companies</h1>
+
+        <a href="/company/add">Add New Company</a>
+
+        <br />
+        <br />
+
+        <table border=1">
+            <tr>
+                <th>Name</th>
+                <th>Actions</th>
+            </tr>
+            <% for(var i = 0; i < companies.length; i++) { %>
+            <tr>
+                <td><%= companies[i].company_name %></td>
+                <td>
+                    <a href="/company/edit/?company_id=<%= companies[i].company_id %>">
+                        Edit
+                    </a>
+                </td>
+            </tr>
+            <% } %>
+        </table>
+
+        <br />
+    </body>
+</HTML>
